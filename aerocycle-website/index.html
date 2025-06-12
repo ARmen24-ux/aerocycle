@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aerocycle - Aviones RC a escala</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Tu pasión por volar empieza aquí</h1>
+      <p>Aviones RC diseñados para precisión y potencia</p>
+      <a href="#especificaciones" class="btn-cta">Conoce el avión</a>
+    </div>
+  </header>
+
+  <!-- Sobre Empresa -->
+  <section class="sobre-empresa">
+    <div class="contenido">
+      <h2>Sobre Aerocycle</h2>
+      <p>En Aerocycle diseñamos y fabricamos aviones RC a escala con precisión técnica...</p>
+    </div>
+  </section>
+
+  <!-- Misión, Visión, Valores -->
+  <section class="mision-vision">
+    <h2>Misión, Visión y Valores</h2>
+    <div class="bloques">
+      <div class="bloque">
+        <h3>Misión</h3>
+        <p>Fabricar aviones RC con precisión técnica...</p>
+      </div>
+      <div class="bloque">
+        <h3>Visión</h3>
+        <p>Ser referentes en el diseño de aviones RC personalizados...</p>
+      </div>
+      <div class="bloque">
+        <h3>Valores</h3>
+        <p>Innovación, compromiso, calidad, pasión...</p>
+      </div>
+    </div>
+
+    <!-- Imagen del plano -->
+    <div class="plano-tecnico">
+      <p>Plano técnico de nuestro avión insignia:</p>
+      <img src="img/plano-preview.png" alt="Plano técnico" id="abrirPlano">
+    </div>
+
+    <!-- Visor PDF -->
+    <div id="visorPDF" class="oculto">
+      <iframe src="docs/plano-tecnico.pdf"></iframe>
+      <button id="cerrarPlano">Cerrar</button>
+      <script src="script/script.js" defer></script>
+    </div>
+  </section>
+
+</body>
+</html>
