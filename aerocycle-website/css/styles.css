@@ -97,3 +97,34 @@ body {
 .oculto {
   display: none;
 }
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #1a1a1a;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+button {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+}
+
+header nav a {
+  margin: 0 15px;
+  font-weight: 600;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
