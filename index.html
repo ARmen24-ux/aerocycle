@@ -20,12 +20,22 @@
 <body>
 
 <!-- 🔝 HERO SECTION -->
-<section class="hero" data-aos="fade-down" role="banner" aria-label="Sección principal de presentación">
-  <img src="img/logo.jpg" alt="Logo AeroCycle" class="logo" />
-  <h1>Tu pasión por volar empieza aquí</h1>
-  <p>Aviones RC diseñados para precisión y potencia</p>
-  <button class="btn-primary" type="button" aria-label="Conoce más sobre el avión">Conoce el avión</button>
+<section class="hero" role="banner" aria-label="Sección principal de presentación" data-aos="fade-down">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img src="img/logo.jpg" alt="Logo AeroCycle" class="logo" />
+    
+    <!-- SVG decorativo avión pequeño -->
+    <svg class="icon-plane" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="#e63946" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+      <path d="M2.5 19l19-7-19-7 4 7-4 7z"/>
+    </svg>
+
+    <h1>Tu pasión por volar empieza aquí</h1>
+    <p>Aviones RC diseñados para precisión y potencia</p>
+    <button class="btn-primary" type="button" aria-label="Conoce más sobre el avión">Conoce el avión</button>
+  </div>
 </section>
+
 
 <!-- 👨‍🏭 SOBRE LA EMPRESA -->
 <section class="about container" data-aos="fade-up" aria-labelledby="about-title">
