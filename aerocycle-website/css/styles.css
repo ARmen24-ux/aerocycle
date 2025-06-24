@@ -275,3 +275,99 @@ a:focus {
     max-width: 300px;
   }
 }
+
+<!-- CSS ADICIONAL PARA HERO -->
+<style>
+.hero-full {
+  background-image: url('../img/render.jpg'); /* o una panorámica del noroeste */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.navbar .logo {
+  height: 40px;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .menu li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: var(--color-rojo);
+}
+
+.hero-content {
+  margin-bottom: 15vh;
+  padding: 0 2rem;
+}
+
+.hero-full h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
+.hero-full p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+.btn-cta {
+  background-color: var(--color-rojo);
+  padding: 1rem 2rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.btn-cta:hover {
+  background-color: #c53030;
+}
+
+@media (max-width: 768px) {
+  .hero-full h1 {
+    font-size: 2.2rem;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .navbar .menu {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+</style>
