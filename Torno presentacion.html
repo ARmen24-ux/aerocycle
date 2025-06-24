@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación: Torno Convencional y CNC</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .slide-container {
+      width: 90%;
+      max-width: 1000px;
+      height: 90vh;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .slide {
+      display: none;
+      padding: 2rem;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+    .slide.active {
+      display: block;
+    }
+    h1, h2 {
+      color: #1a4d8f;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+      background: #e9ecef;
+    }
+    button {
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #1a4d8f;
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+    }
+    button:hover {
+      background-color: #163d73;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slide-container">
+  <!-- Diapositivas -->
+  <div class="slide active">
+    <h1>1. Introducción</h1>
+    <h2>¿Qué es un torno?</h2>
+    <p>Máquina-herramienta que mecaniza piezas giratorias mediante arranque de material.</p>
+    <h2>Breve historia</h2>
+    <p>Desde Egipto antiguo hasta la era CNC, ha evolucionado de manual a computarizado.</p>
+    <h2>Importancia</h2>
+    <p>Esencial en la fabricación de piezas para múltiples industrias por su precisión y versatilidad.</p>
+  </div>
+
+  <div class="slide">
+    <h1>2. Torno Convencional</h1>
+    <h2>Partes principales</h2>
+    <ul>
+      <li>Cabezal fijo</li>
+      <li>Contrapunto</li>
+      <li>Carro portaherramientas</li>
+      <li>Bancada</li>
+      <li>Husillo y barra de avance</li>
+      <li>Caja Norton</li>
+    </ul>
+    <h2>Principio de funcionamiento</h2>
+    <p>La pieza gira y la herramienta corta al avanzar longitudinal o transversalmente.</p>
+  </div>
+
+  <div class="slide">
+    <h2>Tipos de operaciones</h2>
+    <ul>
+      <li><strong>Cilindrado:</strong> Reduce el diámetro de una pieza.</li>
+      <li><strong>Roscado:</strong> Crea roscas externas o internas.</li>
+      <li><strong>Ranurado:</strong> Corta canales o ranuras.</li>
+      <li><strong>Tronzado:</strong> Secciona o corta piezas.</li>
+    </ul>
+    <h2>Ventajas y desventajas</h2>
+    <ul>
+      <li>✔ Bajo costo inicial</li>
+      <li>✔ Ideal para aprendizaje</li>
+      <li>✘ Menor precisión que CNC</li>
+      <li>✘ Operación manual intensiva</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>Aplicaciones comunes</h2>
+    <ul>
+      <li>Piezas cilíndricas</li>
+      <li>Ejes, pernos y bujes</li>
+      <li>Prototipos y mantenimiento</li>
+    </ul>
+    <h2>Habilidades necesarias</h2>
+    <ul>
+      <li>Lectura de planos</li>
+      <li>Medición con calibradores</li>
+      <li>Manejo de herramientas de corte</li>
+      <li>Seguridad industrial</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h1>3. Torno CNC</h1>
+    <h2>¿Qué es el CNC?</h2>
+    <p>Control Numérico Computarizado: máquina operada por software que automatiza el mecanizado.</p>
+    <h2>Cómo funciona</h2>
+    <ul>
+      <li>Controlador (software)</li>
+      <li>Módulos: motor, husillo, sensores</li>
+      <li>Interfaz gráfica y códigos G/M</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>Programación básica</h2>
+    <ul>
+      <li><strong>G-codes:</strong> Movimiento y trayectorias (ej. G01 - corte recto)</li>
+      <li><strong>M-codes:</strong> Funciones auxiliares (ej. M03 - encender husillo)</li>
+    </ul>
+    <h2>Ventajas y desventajas</h2>
+    <ul>
+      <li>✔ Alta precisión</li>
+      <li>✔ Automatización completa</li>
+      <li>✘ Alto costo inicial</li>
+      <li>✘ Requiere programación técnica</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>Aplicaciones industriales</h2>
+    <ul>
+      <li>Producción en serie</li>
+      <li>Industria automotriz y aeroespacial</li>
+      <li>Componentes electrónicos</li>
+    </ul>
+    <h2>Comparación con torno convencional</h2>
+    <p>El torno CNC supera en precisión, velocidad y automatización al torno convencional, aunque requiere mayor inversión y conocimientos técnicos.</p>
+  </div>
+
+  <div class="slide">
+    <h1>4. Comparación Torno Convencional vs CNC</h1>
+    <ul>
+      <li><strong>Precisión:</strong> CNC es más exacto.</li>
+      <li><strong>Velocidad:</strong> CNC produce más rápido.</li>
+      <li><strong>Mano de obra:</strong> Convencional requiere operador constante.</li>
+      <li><strong>Costos:</strong> Convencional es más económico al inicio.</li>
+      <li><strong>Flexibilidad:</strong> CNC permite ajustes complejos.</li>
+      <li><strong>Seguridad:</strong> CNC más seguro por automatización.</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h1>5. Bibliografía</h1>
+    <ul>
+      <li>DeGarmo, E. Paul. *Manufacturing Engineering and Technology.*</li>
+      <li>Kalpakjian, Serope. *Fundamentos de Manufactura Moderna.*</li>
+      <li>Manual de prácticas de torno – CONALEP / SEP</li>
+      <li>Recursos técnicos de Sandvik, Haas Automation</li>
+    </ul>
+  </div>
+
+  <!-- Botones navegación -->
+  <div class="nav-buttons">
+    <button onclick="changeSlide(-1)">Anterior</button>
+    <button onclick="changeSlide(1)">Siguiente</button>
+  </div>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) slide.classList.add("active");
+    });
+  }
+
+  function changeSlide(direction) {
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = 0;
+    if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+    showSlide(currentSlide);
+  }
+</script>
+
+</body>
+</html>

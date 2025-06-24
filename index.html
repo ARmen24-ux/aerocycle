@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AeroCycle - Aviones RC a Escala</title>
+
+  <!-- Tipografía Montserrat desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Estilos CSS locales -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- AOS para animaciones on scroll -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- 🔝 HERO SECTION -->
+<section class="hero" data-aos="fade-down" role="banner" aria-label="Sección principal de presentación">
+  <img src="img/logo.jpg" alt="Logo AeroCycle" class="logo" />
+  <h1>Tu pasión por volar empieza aquí</h1>
+  <p>Aviones RC diseñados para precisión y potencia</p>
+  <button class="btn-primary" type="button" aria-label="Conoce más sobre el avión">Conoce el avión</button>
+</section>
+
+<!-- 👨‍🏭 SOBRE LA EMPRESA -->
+<section class="about container" data-aos="fade-up" aria-labelledby="about-title">
+  <h2 id="about-title">Sobre nosotros</h2>
+  <p>
+    Somos una empresa apasionada por el aeromodelismo de precisión. Diseñamos y fabricamos aviones RC construidos a escala, combinando ingeniería, aerodinámica y materiales de alto rendimiento. Cada modelo es creado con detalle y enfoque técnico para ofrecer una experiencia de vuelo única, ya sea para entrenamiento, hobby o competencia.
+  </p>
+  <img src="img/taller.jpg" alt="Taller de fabricación de aviones RC" />
+</section>
+
+<!-- 🎯 MISIÓN / VISIÓN / VALORES -->
+<section class="mvv container" data-aos="fade-up" data-aos-delay="100" aria-label="Misión, visión y valores de la empresa">
+  <article class="card" role="region" aria-labelledby="mision-title">
+    <h3 id="mision-title">Misión</h3>
+    <p>
+      Diseñar y fabricar aviones RC de alto rendimiento que inspiren a pilotos, ingenieros y entusiastas de la aviación, brindando precisión, potencia y una experiencia de vuelo profesional.
+    </p>
+  </article>
+  <article class="card" role="region" aria-labelledby="vision-title">
+    <h3 id="vision-title">Visión</h3>
+    <p>
+      Convertirnos en referentes de innovación en el diseño y fabricación de aeronaves RC a escala, integrando tecnología, estética y funcionalidad en cada modelo.
+    </p>
+  </article>
+  <article class="card" role="region" aria-labelledby="valores-title">
+    <h3 id="valores-title">Valores</h3>
+    <ul>
+      <li>Calidad técnica</li>
+      <li>Innovación constante</li>
+      <li>Pasión por volar</li>
+      <li>Atención personalizada</li>
+    </ul>
+  </article>
+</section>
+
+<!-- 🧊 RENDER 3D -->
+<section id="modelo-3d" class="seccion container" data-aos="fade-up" data-aos-delay="200" aria-labelledby="modelo3d-title">
+  <h2 id="modelo3d-title">Visualización 3D del avión</h2>
+  <div class="sketchfab-container">
+    <div class="sketchfab-embed-wrapper">
+      <iframe
+        title="Modelo 3D: Light Airplane"
+        frameborder="0"
+        allow="autoplay; fullscreen; xr-spatial-tracking"
+        src="https://sketchfab.com/models/3a3a72d469cb4e7cb4c8d878f878873c/embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        style="width: 100%; height: 480px;"
+        aria-describedby="credito-sketchfab"
+      ></iframe>
+    </div>
+    <p class="credito-sketchfab" id="credito-sketchfab">
+      Modelo de <a href="https://sketchfab.com/jeandiz" target="_blank" rel="noopener noreferrer">Mateusz Woliński</a> en
+      <a href="https://sketchfab.com" target="_blank" rel="noopener noreferrer">Sketchfab</a>
+    </p>
+  </div>
+</section>
+
+
+  <!-- 📐 ESPECIFICACIONES -->
+<section class="specs container" data-aos="fade-up" data-aos-delay="300" aria-labelledby="specs-title">
+  <h2 id="specs-title">Especificaciones Técnicas</h2>
+  <ul>
+    <li><strong>Envergadura:</strong> 1.2 m</li>
+    <li><strong>Materiales:</strong> Balsa, Fibra de Carbono</li>
+    <li><strong>Peso:</strong> 1.8 kg</li>
+    <li><strong>Autonomía:</strong> 25 min</li>
+    <li><strong>Control:</strong> Radio 2.4GHz</li>
+    <li><strong>Motor:</strong> Brushless 1200KV</li>
+  </ul>
+  <div class="btn-group">
+    <button id="plano-preview" class="btn-ver-plano" aria-label="Ver plano técnico del avión">Ver plano técnico</button>
+    <a href="docs/plano-tecnico.pdf" download class="btn-descargar" aria-label="Descargar ficha técnica del avión">Descargar ficha técnica</a>
+  </div>
+</section>
+
+  <!-- 🤖 CHATBOT / FORMULARIO -->
+  <div id="chatbot-container" class="chatbot-hidden">
+    <div class="chatbot-box">
+      <div class="chatbot-header">
+        <h3>Cotiza tu avión RC</h3>
+        <button id="close-chatbot" aria-label="Cerrar chatbot">&times;</button>
+      </div>
+      <div class="chatbot-body" id="chatbot-body">
+        <!-- Aquí se generarán los mensajes -->
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chat-input" placeholder="Escribe aquí..." aria-label="Entrada de mensaje chatbot" />
+        <button id="send-btn">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+<!-- ⭐ TESTIMONIOS --> 
+<section class="testimonios container" data-aos="fade-up" data-aos-delay="400">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="testimonial-slider">
+    <button class="slider-btn prev" aria-label="Testimonio anterior">&#10094;</button>
+    <div class="testimonial-list">
+      <blockquote class="active">
+        “El mejor avión RC que he volado, la calidad y precisión son increíbles. ¡Totalmente recomendado!” – Juan P.
+      </blockquote>
+      <blockquote>
+        “Me encantó la facilidad para navegar en la página y encontrar todo lo que necesitaba. La atención fue excelente.” – María S.
+      </blockquote>
+      <blockquote>
+        “El producto superó mis expectativas, muy bien construido y con un diseño aerodinámico perfecto. ¡Vale cada peso invertido!” – Carlos M.
+      </blockquote>
+      <blockquote>
+        “La compra fue rápida, la entrega puntual y el soporte muy amable. Estoy muy satisfecho con la experiencia completa.” – Laura R.
+      </blockquote>
+    </div>
+    <button class="slider-btn next" aria-label="Testimonio siguiente">&#10095;</button>
+  </div>
+</section>
+
+  <!-- 📷 GALERÍA -->
+  <section class="galeria container" data-aos="fade-up" data-aos-delay="500">
+    <h2>Galería</h2>
+    <div class="grid">
+      <img src="img/avion.jpg" alt="Avión completo" />
+      <img src="img/solid.jpg" alt="Diseño CAD" />
+      <img src="img/taller.jpg" alt="Proceso de construcción" />
+      <!-- Más imágenes luego -->
+    </div>
+  </section>
+
+  <!-- Secciones adicionales con animaciones AOS -->
+  <section data-aos="fade-up" class="container" style="margin-top:2rem;">
+    <h2>Características del modelo</h2>
+    <p>Información detallada...</p>
+  </section>
+
+  <section data-aos="zoom-in" data-aos-delay="200" class="container" style="margin-top:2rem;">
+    <img src="img/render.jpg" alt="Render del avión" style="width: 100%; max-width: 600px;" />
+  </section>
+
+  <!-- 🔚 FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2025 AeroCycle. Todos los derechos reservados.</p>
+      <p>
+        <a href="#">Política de privacidad</a> |
+        <a href="#">Aviso legal</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- 🔍 Modal para visor de PDF -->
+  <div id="pdf-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="pdf-modal-title" tabindex="-1">
+    <div class="modal-content">
+      <button class="close" data-close="pdf-modal" aria-label="Cerrar visor PDF">&times;</button>
+      <iframe src="docs/plano-tecnico.pdf" width="100%" height="600px" title="Plano técnico PDF"></iframe>
+    </div>
+  </div>
+
+  <div class="botones-contacto">
+  <button id="open-chatbot-btn" aria-label="Abrir chatbot de cotización" class="btn-cotizacion">Solicitar cotización</button>
+
+  <a href="https://wa.me/526221768039?text=Hola,%20estoy%20interesado%20en%20un%20avión%20RC.%20¿Me%20puedes%20dar%20más%20información?" 
+    class="whatsapp-float" 
+    target="_blank" 
+    aria-label="Contáctanos por WhatsApp" 
+    rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="white">
+      <path d="M19.11 17.87c-.29-.14-1.7-.83-1.96-.93s-.46-.14-.65.14-.75.93-.91 1.12-.34.21-.62.07a6.6 6.6 0 0 1-1.94-1.2 7.15 7.15 0 0 1-1.32-1.62c-.14-.24 0-.37.1-.5.1-.1.24-.26.36-.4s.16-.21.24-.35a.5.5 0 0 0 0-.47c-.07-.15-.65-1.57-.89-2.15s-.47-.5-.65-.5h-.56a1.07 1.07 0 0 0-.76.36 3.18 3.18 0 0 0-1 2.36 5.57 5.57 0 0 0 1.17 3.04 13.05 13.05 0 0 0 4.34 3.93 14.8 14.8 0 0 0 1.4.51 3.35 3.35 0 0 0 1.53.1 3 3 0 0 0 1.96-1.38 2.4 2.4 0 0 0 .17-1.38c-.07-.14-.25-.21-.54-.36zM16 3A13 13 0 0 0 6.21 23.1l-1.44 4.6a1.11 1.11 0 0 0 1.37 1.37l4.6-1.44A13 13 0 1 0 16 3zm0 23.82a10.82 10.82 0 0 1-5.43-1.48l-.39-.23-2.73.85.88-2.66-.25-.41a10.83 10.83 0 1 1 7.92 3.93z"/>
+    </svg>
+  </a>
+</div>
+
+  <!-- 🔍 Modal para visor 3D -->
+  <div id="model-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="model-modal-title" tabindex="-1">
+    <div class="modal-content">
+      <button class="close" data-close="model-modal" aria-label="Cerrar visor 3D">&times;</button>
+      <img src="img/render.jpg" alt="Modelo 3D del avión" style="width: 100%;" />
+    </div>
+  </div>
+
+  <!-- Scripts JS -->
+  <script src="js/chatbot-flow.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+  <!-- AOS - Animate On Scroll JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800, // duración en milisegundos
+      once: true     // solo se anima una vez al hacer scroll
+    });
+  </script>
+
+</body>
+</html>
