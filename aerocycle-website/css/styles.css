@@ -8,23 +8,30 @@
   --color-negro-transparente: rgba(0, 0, 0, 0.9);
 }
 
+/* Reset básico */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* Tipografía y base */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--color-azul-oscuro);
   color: var(--color-blanco);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Navegación */
+h1, h2, h3 {
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
 
+/* Navegación */
 header {
   background-color: var(--color-azul-oscuro);
   padding: 1rem 2rem;
@@ -56,271 +63,17 @@ header nav a:focus {
 }
 
 /* Hero */
-
-.hero {
-  padding: 5rem 2rem;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  color: var(--color-gris-claro);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Sección Sobre la empresa */
-
-.sobre-empresa {
-  background-color: #111;
-  padding: 4rem 2rem;
-  text-align: center;
-  max-width: 900px;
-  margin: 2rem auto;
-  border-radius: 10px;
-}
-
-.sobre-empresa p {
-  font-size: 1.1rem;
-  color: var(--color-gris-claro);
-  line-height: 1.5;
-}
-
-/* Misión y Visión */
-
-.mision-vision {
-  padding: 4rem 2rem;
-  background-color: var(--color-blanco);
-  color: #111;
-  text-align: center;
-  max-width: 900px;
-  margin: 2rem auto;
-  border-radius: 10px;
-}
-
-.mision-vision h2 {
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.mision-vision p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Bloques flexibles */
-
-.bloques {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.bloque {
-  background-color: var(--color-gris-claro);
-  border-radius: 10px;
-  padding: 2rem;
-  flex: 1 1 300px;
-  color: #111;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-
-.bloque:hover,
-.bloque:focus-within {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  outline: none;
-}
-
-/* Plano técnico */
-
-.plano-tecnico {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.plano-tecnico img {
-  width: 300px;
-  cursor: pointer;
-  border: 2px solid var(--color-rojo);
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.plano-tecnico img:hover,
-.plano-tecnico img:focus {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px var(--color-rojo);
-  outline: none;
-}
-
-/* Visor PDF modal */
-
-#visorPDF {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-negro-transparente);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1rem;
-  z-index: 1000;
-}
-
-#visorPDF iframe {
-  width: 90%;
-  height: 80%;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-}
-
-#visorPDF button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.5rem;
-  background-color: var(--color-rojo);
-  color: var(--color-blanco);
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#visorPDF button:hover,
-#visorPDF button:focus {
-  background-color: #b32a37;
-  outline: none;
-}
-
-/* Botones generales */
-
-button {
-  background: linear-gradient(135deg, var(--color-azul-brillante), var(--color-azul-oscuro-2));
-  color: var(--color-blanco);
-  border-radius: 8px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0, 123, 255, 0.5);
-}
-
-button:hover,
-button:focus {
-  background: linear-gradient(135deg, var(--color-azul-oscuro-2), #003d80);
-  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.7);
-  outline: none;
-}
-
-/* Links dentro del body (si hay) */
-
-a {
-  color: var(--color-azul-brillante);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover,
-a:focus {
-  color: var(--color-rojo);
-  text-decoration: underline;
-  outline: none;
-}
-
-/* Responsive */
-
-@media (max-width: 768px) {
-  .bloques {
-    flex-direction: column;
-    padding: 1rem;
-  }
-
-  .bloque {
-    flex: 1 1 100%;
-  }
-
-  header nav {
-    gap: 1rem;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .plano-tecnico img {
-    width: 90%;
-    max-width: 300px;
-  }
-}
-
-<!-- CSS ADICIONAL PARA HERO -->
-<style>
 .hero-full {
-  background-image: url('../img/render.jpg'); /* o una panorámica del noroeste */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('../img/render.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: white;
   text-align: center;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-}
-
-.navbar .logo {
-  height: 40px;
-}
-
-.navbar .menu {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar .menu li a {
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.navbar .menu li a:hover {
-  color: var(--color-rojo);
 }
 
 .hero-content {
@@ -342,32 +95,199 @@ a:focus {
   text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
 
+/* Botón CTA */
 .btn-cta {
-  background-color: var(--color-rojo);
+  background: linear-gradient(135deg, var(--color-rojo), #c53030);
   padding: 1rem 2rem;
   color: white;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .btn-cta:hover {
-  background-color: #c53030;
+  background: linear-gradient(135deg, #c53030, #a32020);
+  transform: translateY(-3px);
 }
 
+/* Sección Sobre la empresa */
+.sobre-empresa {
+  background-color: #111;
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+.sobre-empresa p {
+  font-size: 1.1rem;
+  color: var(--color-gris-claro);
+  line-height: 1.5;
+}
+
+/* Misión y Visión */
+.mision-vision {
+  padding: 4rem 2rem;
+  background-color: var(--color-blanco);
+  color: #111;
+  text-align: center;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+.mision-vision h2 {
+  margin-bottom: 1rem;
+}
+
+.mision-vision p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Bloques flexibles */
+.bloques {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bloque {
+  background-color: var(--color-gris-claro);
+  border-radius: 10px;
+  padding: 2rem;
+  flex: 1 1 300px;
+  color: #111;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.bloque:hover,
+.bloque:focus-within {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+  filter: brightness(1.05);
+}
+
+/* Plano técnico */
+.plano-tecnico {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.plano-tecnico img {
+  width: 300px;
+  cursor: pointer;
+  border: 2px solid var(--color-rojo);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plano-tecnico img:hover,
+.plano-tecnico img:focus {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px var(--color-rojo);
+  outline: none;
+}
+
+/* Botones generales */
+button {
+  background: linear-gradient(135deg, var(--color-azul-brillante), var(--color-azul-oscuro-2));
+  color: var(--color-blanco);
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 123, 255, 0.5);
+}
+
+button:hover,
+button:focus {
+  background: linear-gradient(135deg, var(--color-azul-oscuro-2), #003d80);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.7);
+  outline: none;
+}
+
+/* Links */
+a {
+  color: var(--color-azul-brillante);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-rojo);
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-azul-oscuro);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer a {
+  color: var(--color-azul-brillante);
+}
+
+footer a:hover {
+  color: var(--color-rojo);
+}
+
+/* Animación en scroll */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .bloques {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .bloque {
+    flex: 1 1 100%;
+  }
+
+  header nav {
+    gap: 1rem;
+  }
+
   .hero-full h1 {
     font-size: 2.2rem;
   }
-  .navbar {
-    flex-direction: column;
-    gap: 0.5rem;
+
+  .hero-full p {
+    font-size: 1rem;
   }
-  .navbar .menu {
-    flex-direction: column;
-    gap: 0.75rem;
+
+  .plano-tecnico img {
+    width: 90%;
+    max-width: 300px;
   }
 }
-</style>
